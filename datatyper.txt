@@ -1,0 +1,38 @@
+
+restaurang/kyrka/sushi/bla/bla
+{ 
+  name: string,
+  about: string,
+  images: [
+    {
+      url: string,
+    }
+  ],
+  review: [ReviewSchema]
+  tel: number,
+  info: string,
+  adress: string,
+  city: [CitySchema],
+  location: string,
+}
+
+ReviewSchema
+{
+  title: string,
+  grade: {
+    type: number,
+    enum: [1, 2 , 3 , 4 , 5]
+  }
+  review: string,
+  email: string,
+  location: string,
+}
+
+User 
+{
+  userName: string,
+  info: string,
+  profilePicture: string,
+  reviews: [ReviewSchema]
+}
+
