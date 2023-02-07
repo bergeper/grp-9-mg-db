@@ -6,7 +6,11 @@ exports.getAllReviewsForRestaurant = async (req, res) => {
 };
 
 exports.createReview = async (req, res) => {
-  return res.send("A review is created").status(201);
+  //return res.send("A review is created").status(201);
+  return res
+    .setHeader("Location", "http:localhost:5000/api/v1/reviews/NewReview")
+    .status(201)
+    .json({ data: "Woop" });
   // if (!name) return.res.sendStatus(400)
 };
 
